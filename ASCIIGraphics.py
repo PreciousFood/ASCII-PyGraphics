@@ -178,7 +178,7 @@ def test():
 
         if 'esc' in pressed_keys:
             run = False
-        time.sleep(1)
+        time.sleep(.1)
 
     qquit()
 
