@@ -4,9 +4,6 @@ from platform import system
 import time
 import pynput
 
-K = pynput.keyboard.Key
-
-
 
 
 pressed_keys = set()
