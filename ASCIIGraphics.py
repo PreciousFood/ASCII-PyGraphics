@@ -65,7 +65,21 @@ def overlay(from_array: np, to_array: np, pos: tuple):
     a = a[start_y:end_y, start_x:end_x]
 
     return a
-     
+
+
+last_time = time.time()
+def tick(FPS):
+    global last_time
+
+    min_time = 1/FPS
+    # How long we need to wait to maintain FPS
+    wait_time = min_time - last_time + time.time()
+    if wait_time > 0:
+        time.sleep(wait_time)
+
+    last_time = time.time()
+
+
 
 class Box:
     def __init__(self, size: tuple, pos=(0, 0), fill='box', custom_pattern=None):
@@ -178,7 +192,7 @@ def test():
 
         if 'esc' in pressed_keys:
             run = False
-        time.sleep(.1)
+        tick(30)
 
     qquit()
 
