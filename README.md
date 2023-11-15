@@ -6,4 +6,4 @@ Curreantly it only works in windows.
 
 # How To Use
 
-I don't feel like writing this right now...
+Find the file called `ASCIIGraphics.py` and put it in the same folder as your project. 
