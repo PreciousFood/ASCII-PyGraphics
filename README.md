@@ -57,7 +57,7 @@ plate is the basic "look" of a box. This is assighned upon creation and is never
 #### face
 This is the dynamic appearence of a box. It can be modified using the draw and drw_next methods. Face is also a numpy array of values and is derived from the plate. The difference is that face is what is rendered when the instance is printed.
 #### pos
-A simple tuple that holds the sprites position. This can be changed with the move method. It dictates where the other_box goes when drawng. 
+A simple tuple that holds the sprites position. This can be changed with the move method. It dictates where the other_box goes when drawing. 
 
 ## User Input
 This uses the [pynput](https://pynput.readthedocs.io/en/latest/) library to handle input from the keyboard. This will have to be downloaded before use. 
