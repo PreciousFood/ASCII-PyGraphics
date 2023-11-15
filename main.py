@@ -1,44 +1,50 @@
-
-import msvcrt
 import numpy as np
 import os
 from platform import system
 import time
+import pynput
+
+K = pynput.keyboard.Key
 
 
-catch_system = True
 
-def init():
+
+pressed_keys = set()
+# translate key
+translate = lambda key: key.char if hasattr(key, "char") else key.name
+
+def on_press(key):
+    key = translate(key)   
+    if key not in pressed_keys:
+        pressed_keys.add(key)
+
+def on_release(key):
+    key = translate(key)
+    if key in pressed_keys:
+        pressed_keys.remove(key)
+
+def init(catch_system=True):
     if catch_system:
         # Verify Compatibility
         if system() != "Windows":
-            raise RuntimeError(f"This software was not designed for this system ({system()}). Set 'catch_system' to False if you would like to continue anyway.")
+            raise RuntimeError(f"This software was not designed for this system ({system()}). Set 'catch_system' to False (init(catch_system=False)) if you would like to continue anyway.")
     # Clear the Screen
     os.system('cls')
 
-# TODO: BETTER KEY INPUT
+
+    global keyboard_listener
+    keyboard_listener = pynput.keyboard.Listener(on_press=on_press, on_release=on_release)
+    keyboard_listener.start()
+
+def qquit():
+    keyboard_listener.stop()
+    quit()
+    
+
+
+
 # TODO: FPS
 # TODO: COMPATIBLE WITH OTHER OS?
-
-
-
-def user_input():
-    if msvcrt.kbhit():
-        key = ord(msvcrt.getch())
-
-        if key == 224:  # Arrow key prefix
-            key = ord(msvcrt.getch())  # Get the actual arrow key
-            # Codes for various keys
-            if key == 72:
-                return "u"
-            elif key == 80:
-                return "d"
-            elif key == 75:
-                return "l"
-            elif key == 77:
-                return "r"
-        elif key == 27: 
-            return "esc"
 
 
 
@@ -146,14 +152,14 @@ class Box:
 if __name__ == "__main__":
     # EXAMPLE...
     class Sprite(Box):
-        def update(self, key):
-            if "l" == key:
+        def update(self, keys):
+            if "left" in keys:
                 self.pos = self.pos[0]-1, self.pos[1]
-            if "r" == key:
+            if "right" in keys:
                 self.pos = self.pos[0]+1, self.pos[1]
-            if "u" == key:
+            if "up" in keys:
                 self.pos = self.pos[0], self.pos[1]-1
-            if "d" == key:
+            if "down" in keys:
                 self.pos = self.pos[0], self.pos[1]+1
 
     b = Sprite((4, 4))
@@ -165,18 +171,20 @@ if __name__ == "__main__":
     print(s)
     run = True
     while run:
-        i = user_input()
-        if i is not None:
-            b.update(i)
-            s.draw(b)
+        b.update(pressed_keys)
+        s.draw(b)
+        print(s)
+        print(b.pos)
+        print(s.collide(b))
+        print(b.collide(s))
 
-            print(s)
-            print(b.pos)
-            print(s.collide(b))
-            print(b.collide(s))
-        if i == 'esc':
+        if 'esc' in pressed_keys:
             run = False
+        time.sleep(1)
 
+    qquit()
+
+    
 # Chome dino. Just becuase
 dino = '''
                      
