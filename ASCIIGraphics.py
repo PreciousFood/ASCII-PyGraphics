@@ -6,6 +6,7 @@ import pynput
 
 
 
+
 pressed_keys = set()
 # translate key
 translate = lambda key: key.char if hasattr(key, "char") else key.name
@@ -146,7 +147,7 @@ class Box:
 
 
 
-if __name__ == "__main__":
+def test():
     # EXAMPLE...
     class Sprite(Box):
         def update(self, keys):
@@ -181,6 +182,9 @@ if __name__ == "__main__":
 
     qquit()
 
+
+if __name__ == "__main__":
+    test()
     
 # Chome dino. Just becuase
 dino = '''
