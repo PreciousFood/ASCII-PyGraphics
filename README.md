@@ -53,11 +53,11 @@ This is increadibly easy. Every time you want to render the box onto the screen,
 ### Important for Understanding
 There are three important variables in the Box class. plate, face, and pos. 
 #### plate
-plate is the basic "look" of a box. This is assighned upon creation and is never changed. It is affected using the fill and custom_pattern arguments. Under the hood this is a numpy array of characters. 
+plate is the basic "look" of a box. This is assighned upon creation and is never changed. It is affected using the `fill` and `custom_pattern` arguments. Under the hood this is a numpy array of characters. 
 #### face
-This is the dynamic appearence of a box. It can be modified using the draw and drw_next methods. Face is also a numpy array of values and is derived from the plate. The difference is that face is what is rendered when the instance is printed.
+This is the dynamic appearence of a box. It can be modified using the `draw` and `draw_next` methods. `face` is also a numpy array of values and is derived from the `plate`. The difference is that `face` is what is rendered when the instance is printed.
 #### pos
-A simple tuple that holds the sprites position. This can be changed with the move method. It dictates where the other_box goes when drawing. 
+A simple tuple that holds the sprites position. This can be changed with the `move` method. It dictates where the `other_box` goes when drawing. 
 
 ## User Input
 This uses the [pynput](https://pynput.readthedocs.io/en/latest/) library to handle input from the keyboard. This will have to be downloaded before use. 
@@ -77,3 +77,18 @@ Stops the keyboard listener and calls `quit()`
 Doesn't do anything else as of now. 
 
 It is only called `qquit` becuase `quit` was taken.
+
+
+
+# A Tutorial/Walkthrough
+Were going to walk through the creation of a simple script. A basic version of the chrome dino game.
+
+1. Basic Setup
+   - At the top type the following code
+![import ASCIIGraphics as graphics   graphics.init()](README_images/setup.png)
+
+2. Now lets write a Dino class.
+   - It inherits from the `graphics.Box` class
+   - This gives it all the "abilities" of `Box`
+   - ![class Dino(graphics.Box)](README_images\dino%20class.png)
+
