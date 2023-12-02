@@ -1,1 +1,1 @@
-from .ASCIIGraphics import Box, init, qquit
+from .main import Box, init, qquit
