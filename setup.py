@@ -1,20 +1,19 @@
 from setuptools import setup, find_packages
 
-
-with open("README.md", "r") as file:
-    description = file.read()
-
 setup(
     name="ASCIIGraphics", 
-    version="1.0.2", 
+    version="1.0.3", 
     packages=find_packages(),
     install_requires=[
         "numpy",
         "pynput"
     ],
-    long_description=description,
-    long_description_content_type="text/markdown"
-
+    long_description=open("README.md", "r").read(),
+    long_description_content_type="text/markdown",
+    license="MIT",
+    author="Precious Food",
+    author_email="preciousfood84@gmail.com",
+    url="https://github.com/PreciousFood/ASCIIGraphics"
 )
 
 # install setup stuffs...
