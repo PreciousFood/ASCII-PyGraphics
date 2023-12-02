@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-with open("README.md", "r") as file:
+with open("ASCIIGraphics\README.md", "r") as file:
     description = file.read()
 
 setup(
@@ -32,7 +32,7 @@ setup(
 #   from .main import [stuff]
 # 
 # Build stuff
-# python setup.py sdist bdist_wheel
+# python PROJECT_NAME/setup.py sdist bdist_wheel
 #
 #
 # COMMANDS FOR TESTING (Local)
