@@ -1,0 +1,33 @@
+[ASCIIGraphics]
+name = "ASCIIGraphics"
+version = "1.0.0"
+description = "A package for simple graphics in the terminal"
+readme = "README.md"
+
+requires-python = ">=3.7"
+license = {file = "LICENSE.txt"}
+
+authors = [
+  {name = "Precious Food", email = "preciousfood84@gmail.com"}
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+  "numpy"
+  "pynput"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/PreciousFood/ASCIIGraphics"
+
+
+[tool.setuptools]
+
+[build-system]
+
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
