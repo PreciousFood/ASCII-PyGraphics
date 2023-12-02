@@ -1,8 +1,7 @@
 # ASCIIGraphics
 
-This is a python program I wrote that can display stuff in the terminal. This is also my first github thing. 
-
-Curreantly it only works in windows. 
+This is a python library for easy graphics in the terminal.
+See the `example.py` file of GitHub for an example with lots of comments
 
 # How To Use
 
@@ -79,16 +78,4 @@ Doesn't do anything else as of now.
 It is only called `qquit` becuase `quit` was taken.
 
 
-
-# A Tutorial/Walkthrough
-Were going to walk through the creation of a simple script. A basic version of the chrome dino game.
-
-1. Basic Setup
-   - At the top type the following code
-![import ASCIIGraphics as graphics   graphics.init()](README_images/setup.png)
-
-2. Now lets write a Dino class.
-   - It inherits from the `graphics.Box` class
-   - This gives it all the "abilities" of `Box`
-   - ![class Dino(graphics.Box)](README_images\dino%20class.png)
 

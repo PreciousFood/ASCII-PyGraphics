@@ -41,7 +41,6 @@ def qquit():
 
 
 
-# TODO: FPS
 # TODO: COMPATIBLE WITH OTHER OS?
 
 
