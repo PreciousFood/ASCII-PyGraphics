@@ -1,19 +1,19 @@
 from setuptools import setup, find_packages
 
 
-with open("ASCIIGraphics\README.md", "r") as file:
+with open("README.md", "r") as file:
     description = file.read()
 
 setup(
     name="ASCIIGraphics", 
-    version="1.0.0", 
+    version="1.0.2", 
     packages=find_packages(),
     install_requires=[
         "numpy",
         "pynput"
     ],
     long_description=description,
-    long_description_type="text/markdown"
+    long_description_content_type="text/markdown"
 
 )
 
@@ -32,7 +32,7 @@ setup(
 #   from .main import [stuff]
 # 
 # Build stuff
-# python PROJECT_NAME/setup.py sdist bdist_wheel
+# python setup.py sdist bdist_wheel
 #
 #
 # COMMANDS FOR TESTING (Local)
