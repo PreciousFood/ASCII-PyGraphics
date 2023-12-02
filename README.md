@@ -6,18 +6,8 @@ See the `example.py` file of GitHub for an example with lots of comments
 # How To Use
 
 ## Setup
-The following steps are a suggestion only. 
 
-1. Find the file called `ASCIIGraphics.py` and put it in the same folder as your project.
-2. At the top of your code type `import ASCIIGraphics as graphics`. This will give you access to all the functionality in `ASCIIGraphics.py`
-3. Ensure you have numpy and pynput installed. `ASCIIGraphics.py` needs these to run.
-     - Use `pip install numpy` and `pip install pynput`
-     - See [here](https://packaging.python.org/en/latest/tutorials/installing-packages/) for more information.
-4. You can test to see if `ASCIIGraphics.py` is working by typing `graphics.test()` in your code.
-     - See `example.py` for an example of this.
-6. This code can only be run in specific places. For exampe, WindowsPowershell is fine, but the default IDLE that comes with python is not. This may require some trial and error and likely depends on your computer. For me, opening Powershell and running the comand `python [path to file]` works.
-7. After running the test code a screen with a large box will appear. A smaller box is in the top left corner. Use arrow keys to move and escape to quit. If the screen doesn't appear to be rendering properly, press escape, put the output terminal in fullscreen, and run it again.
-8. Congragulations, you have completed setup!!!
+1. Download from pip with `pip install -i https://test.pypi.org/simple/ ASCIIGraphics`
 
 
 
@@ -66,16 +56,20 @@ They are stored as strings such as `'a', 'B', '5', ')', 'up', 'esc', and 'enter'
 
 ## "Extra" Stuff
 The `init()` and `qquit()` functions. 
-### `init(catch_system=True)`
-Currently I can only gauruntee compatibility for Windows. If the OS is not Windows a `RuntimeError` is raised. However, setting `catch_system` to False disables this catch. Instead, the program will throw an error at the first non-compatible code it comes across.
+### `init()`
+Clears the screen to prepare for displaying/
+`init` also starts the `keyboard_listener`. 
 
-Other than ensure that the OS is compatible, `init` also starts the `keyboard_listener`. 
 
 ### `qquit()`
 Stops the keyboard listener and calls `quit()`
 Doesn't do anything else as of now. 
 
 It is only called `qquit` becuase `quit` was taken.
+
+### `tick(FPS)`
+Pauses the program until enough time has passed to satisfy the FPS requirement.
+If the program takes longer than the necessary time thsi function does nothing.
 
 
 

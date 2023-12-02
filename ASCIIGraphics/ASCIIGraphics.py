@@ -19,14 +19,8 @@ def on_release(key):
     if key in pressed_keys:
         pressed_keys.remove(key)
 
-def init(catch_system=True):
-    if catch_system:
-        # Verify Compatibility
-        if system() != "Windows":
-            raise RuntimeError(f"This software was not designed for this system ({system()}). Set 'catch_system' to False (init(catch_system=False)) if you would like to continue anyway.")
-    # Clear the Screen
+def init():
     os.system('cls')
-
 
     global keyboard_listener
     keyboard_listener = pynput.keyboard.Listener(on_press=on_press, on_release=on_release)
