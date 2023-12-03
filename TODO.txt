@@ -1,5 +1,7 @@
-Make example.py
+annotate example.py
 Investigate Licenses
-Publish to actual pypi
-create auto tests
+Publish to actual pypi -> when I can make an account
+create auto tests?
 Make more compatable
+Colors???
+
