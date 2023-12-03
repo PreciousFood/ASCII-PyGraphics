@@ -7,5 +7,3 @@ Colors???
 
 functions/variables that return valid patterns/keys
 fix error if qquit is called before init
-
-here is a change
