@@ -1,0 +1,5 @@
+Make example.py
+Investigate Licenses
+Publish to actual pypi
+create auto tests
+Make more compatable
