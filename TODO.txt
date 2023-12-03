@@ -7,3 +7,5 @@ Colors???
 
 functions/variables that return valid patterns/keys
 fix error if qquit is called before init
+
+this is a change. Who did i?
