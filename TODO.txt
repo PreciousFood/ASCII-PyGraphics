@@ -1,10 +1,6 @@
 
-Investigate Licenses
-Publish to actual pypi -> when I can make an account
-create auto tests?
-Make more compatable
 Colors???
 
 functions/variables that return valid patterns/keys
-fix error if qquit is called before init
+
 

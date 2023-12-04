@@ -19,15 +19,27 @@ def on_release(key):
     if key in pressed_keys:
         pressed_keys.remove(key)
 
-def init():
-    os.system('cls')
+def init(catch_sys=True):
+    os_name = system()
+
+    if os_name == 'Windows':
+        os.system('cls')
+    elif os_name == 'Linux' or os_name == 'Darwin':
+        os.system('clear')
+    else:
+        if catch_sys:
+            raise RuntimeError(f"Unsoported OS: {system()}. Use init(catch_sys=False) to ignore.")
+
 
     global keyboard_listener
     keyboard_listener = pynput.keyboard.Listener(on_press=on_press, on_release=on_release)
     keyboard_listener.start()
 
 def qquit():
-    keyboard_listener.stop()
+    try:
+        keyboard_listener.stop()
+    except NameError:
+        pass
     quit()
     
 
@@ -178,8 +190,6 @@ def test():
         s.draw(b)
         print(s)
         print(b.pos)
-        print(s.collide(b))
-        print(b.collide(s))
 
         if 'esc' in pressed_keys:
             run = False
