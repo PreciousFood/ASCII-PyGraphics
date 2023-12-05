@@ -1,5 +1,5 @@
 # Import all from ASCII-PyGraphics
-from ASCII-PyGraphics import *
+from ASCII_PyGraphics import *
 
 # Initialisation function.
 init()

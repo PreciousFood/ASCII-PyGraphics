@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ASCII-PyGraphics", 
-    version="1.0.1", 
+    name="ASCII_PyGraphics", 
+    version="1.0.2", 
     packages=find_packages(),
     install_requires=[
         "numpy",
@@ -13,7 +13,7 @@ setup(
     license="MIT",
     author="Precious Food",
     author_email="preciousfood84@gmail.com",
-    url="https://github.com/PreciousFood/ASCII-PyGraphics"
+    url="https://github.com/PreciousFood/ASCII_PyGraphics"
 )
 
 
