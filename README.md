@@ -7,7 +7,7 @@ See the `example.py` file of GitHub for an example with lots of comments
 
 ## Setup
 
-1. Download from pip with `pip install ASCIIGraphics`
+1. Download from pip with `pip install ASCII-PyGraphics`
 
 ## Boxes
 
