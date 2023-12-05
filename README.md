@@ -1,4 +1,4 @@
-# ASCIIGraphics
+# ASCII-PyGraphics
 
 This is a python library for easy graphics in the terminal.
 See the `example.py` file of GitHub for an example with lots of comments

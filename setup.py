@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ASCIIGraphics", 
+    name="ASCII-PyGraphics", 
     version="1.0.1", 
     packages=find_packages(),
     install_requires=[
@@ -13,7 +13,7 @@ setup(
     license="MIT",
     author="Precious Food",
     author_email="preciousfood84@gmail.com",
-    url="https://github.com/PreciousFood/ASCIIGraphics"
+    url="https://github.com/PreciousFood/ASCII-PyGraphics"
 )
 
 
