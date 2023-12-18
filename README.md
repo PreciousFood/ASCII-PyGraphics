@@ -8,6 +8,7 @@ See the `example.py` file of GitHub for an example with lots of comments
 ## Setup
 
 1. Download from pip with `pip install ASCII-PyGraphics`
+2. import with `from ASCII_PyGraphics import *` or `import ASCII_PyGraphics as graphics`
 
 ## Boxes
 
