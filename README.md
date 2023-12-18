@@ -79,14 +79,14 @@ A simple tuple that holds the sprites position. This can be changed with the `mo
 
 ## User Input
 
-This uses the [pynput](https://pynput.readthedocs.io/en/latest/) library to handle input from the keyboard. This will have to be downloaded before use.
+This uses the [pynput](https://pynput.readthedocs.io/en/latest/) library to handle input from the keyboard. Some computers may complain about security. The solution to this is left asan excersise to the user.
 
 `pressed_keys` is a set that contains all curently pressed keys.
 They are stored as strings such as `'a', 'B', '5', ')', 'up', 'esc', and 'enter'`.
 
 ## "Extra" Stuff
 
-The `init()` and `qquit()` functions.
+The `tick(FPS)`, `init()` and `qquit()` functions.
 
 ### `init()`
 
